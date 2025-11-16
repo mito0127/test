@@ -12,6 +12,8 @@ on:
 
 env:
   REGISTORY: ghcr.io
+
+env:
   IMAGE: ${{ env.REGISTORY }}/${{ github.repository }}
 
 jobs:
