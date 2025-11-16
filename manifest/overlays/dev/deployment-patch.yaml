@@ -8,4 +8,4 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: ghcr.io/mito0127/test:0.0.0
+        image: ghcr.io/mito0127/test:1.0.0
