@@ -2,13 +2,13 @@ name: Update prod
 
 on:
   workflow_dispatch:
-#  push:
-#    branches:
-#      - main
-#    paths:
-#      - app/**
-#    tags:
-#      - 'v*'
+  push:
+    branches:
+      - main
+    paths:
+      - app/**
+    tags:
+      - 'v*'
 
 env:
   REGISTORY: ghcr.io
