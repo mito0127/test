@@ -53,7 +53,7 @@ jobs:
       - name: Update deployment manifest and push
         id: update_manifest
         run: |
-          cd ./manifest/overlats/prod
+          cd ./manifest/overlays/prod
           sed -i 's|image: ${{ env.IMAGE }}:.*|image: ${{ env.IMAGE }}:${{ steps.docker_metadata.outputs.tags }}|' deployment-patch.yaml
           git config user.name "github-actions"
           git config user.email "actions@github.com"
