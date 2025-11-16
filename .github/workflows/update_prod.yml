@@ -54,8 +54,8 @@ jobs:
         id: update_manifest
         run: |
           cd ./manifest/overlays/prod
-          sed -i "s|image: ${{ env.IMAGE }}:.*|image: ${{ env.IMAGE }}:${{ steps.docker_metadata.outputs.tags }}|" deployment-patch.yaml
+          sed -i "s|image: ${{ env.IMAGE }}:.*|image: ${{ env.IMAGE }}:${{ env.DOCKER_METADATA_OUTPUT_VERSION }}" deployment-patch.yaml
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git commit -am "Update image to v${{ steps.docker_metadata.outputs.tags }}"
+          git commit -am "Update image to v${{ env.DOCKER_METADATA_OUTPUT_VERSION }}"
           git push origin main
