@@ -58,5 +58,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git commit -am "Update image to v${{ env.DOCKER_METADATA_OUTPUT_VERSION }}"
-          git pull origin main
+          git pull
           git push origin HEAD:main
