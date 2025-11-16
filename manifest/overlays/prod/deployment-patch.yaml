@@ -8,7 +8,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: ghcr.io/mito0127/test:0.0.0
         resources:
           requests:
             cpu: 200m
